@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #3F888F 0%, #F6F6F6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: cadetblue;
+            margin-bottom: 25px;
+            font-size: 3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3F888F, #F6F6F6);
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5D9B9B;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        input[type="number"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        button {
+            background: linear-gradient(135deg, #3F888F, #F6F6F6);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            border: 2px dashed #e0e0e0;
+        }
+
+        @media (max-widht: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class = "container">
+      <h1>Dia da Semana</h1> 
+    <form action="script.php" method="post">
+       <div class="form-group">
+        <label for="numero">Digite um número (1 a 7):</label>
+        <input type="number" id="numero" name="numero" min="1" max="7" required>
+       </div>
+        <button type="submit">Ver Dia da Semana</button>
+    </form>
+  </div>
+</body>
+</html>
